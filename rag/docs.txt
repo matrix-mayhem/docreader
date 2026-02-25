@@ -1,0 +1,3 @@
+Employees are entitled to 20 annual leave days.
+Unused leave expires after one year.
+Remote work is allowed twice a week.
