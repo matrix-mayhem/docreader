@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: financial-analytics
+  labels:
+    app.kubernetes.io/name: financial-analytics-api
+    app.kubernetes.io/part-of: learning-platform

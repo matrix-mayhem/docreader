@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: financial-analytics-api
+  namespace: financial-analytics
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: financial-analytics-api
