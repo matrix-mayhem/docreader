@@ -20,6 +20,7 @@ Welcome to the **OOPS** folder. This material is designed to help you learn Obje
 4. Explore reusable architecture in `04_design_patterns.md`
 5. Practice with `05_projects_and_exercises.md`
 6. Master architecture with `06_system_design_patterns.md`
+7. Learn production API architecture with `07_api_design_senior_playbook.md`
 
 ## Quick Start Example (Python)
 
