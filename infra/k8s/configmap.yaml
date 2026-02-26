@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: financial-analytics-config
+  namespace: financial-analytics
+data:
+  APP_ENV: "dev"
+  LOG_LEVEL: "info"
+  WORKERS: "2"

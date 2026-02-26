@@ -70,3 +70,7 @@ account_id,category,amount,transaction_date
 acct-001,cloud,129.50,2024-01-10
 acct-002,payroll,5600.00,2024-01-15
 ```
+
+## Infrastructure learning assets
+
+To study containerization, CI/CD, IaC, and orchestration in one place, review the assets under `infra/` plus top-level `Dockerfile`, `Jenkinsfile`, and `.github/workflows/ci-cd.yml`. Start with `infra/README.md` for a guided path.
