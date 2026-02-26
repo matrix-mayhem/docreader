@@ -51,3 +51,11 @@ class AnomalyResponse(BaseModel):
     amount: float
     category: str
     transaction_date: date
+
+
+class ConcurrencyDemoResponse(BaseModel):
+    mode: str
+    workers: int
+    tasks: int
+    elapsed_ms: float
+    sample: list[int | float | str]

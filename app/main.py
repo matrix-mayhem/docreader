@@ -16,6 +16,8 @@ from app.services.analytics import (
     load_transactions_frame,
 )
 
+from app.services.concurrency_lab import run_concurrency_showcase
+
 app = FastAPI(title="Financial Analytics API", version="1.0.0")
 
 Base.metadata.create_all(bind=engine)
@@ -77,3 +79,11 @@ def get_forecast(db: Session = Depends(get_db)):
 def get_anomalies(db: Session = Depends(get_db)):
     frame = load_transactions_frame(db)
     return detect_anomalies(frame)
+
+
+@app.get("/lab/concurrency", response_model=list[schemas.ConcurrencyDemoResponse])
+async def concurrency_lab(task_count: int = 12):
+    if task_count < 1 or task_count > 40:
+        raise HTTPException(status_code=422, detail="task_count must be between 1 and 40")
+    result = await run_concurrency_showcase(task_count=task_count)
+    return [item.__dict__ for item in result]
